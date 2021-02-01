@@ -1,62 +1,48 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import { useRouter } from "next/router";
 
-import styled from "styled-components";
+import Logo from "../src/components/QuizLogo/index";
+import Button from "../src/components/Button/index";
+import Input from "../src/components/Input/index";
 import Widget from "../src/components/Widget/index";
-import Footer from "../src/components/Footer/index" ;
+import Footer from "../src/components/Footer/index";
 import GitHubCorner from "../src/components/GithubCorner/index";
 import QuizBackground from "../src/components/QuizBackground/index";
+import QuizContainer from "../src/components/QuizContainer";
 
-const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
-
-export default function Home() {
+export default function IndexPage() {
   const route = useRouter();
-  const [nickName, setNickName] = useState('');
+  const [nickName, setNickName] = useState("");
 
   return (
-    <QuizBackground
-      backgroundImage={
-        "https://a-static.besthdwallpaper.com/the-legend-of-zelda-breath-of-the-wild-para-o-switch-nintendo-papel-de-parede-1280x768-922_13.jpg"
-      }
-    >
-      <Head>
-        {/* <meta property="og:title" content={db.title} />
-        <meta property="og:description" content={db.description} />
-        <meta property="og:image" content={db.bg} />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="theme-color" content="#ffffff" /> */}
-      </Head>
+    <QuizBackground backgroundImage="https://www.compare.bet/wp-content/uploads/2020/08/videogame-bg-1.jpg">
       <QuizContainer>
+        <Logo />
+
         <Widget>
           <Widget.Header>
-            <h1> The Legend Of Zelda </h1>
+            <h1> Retrô Games - Você lebra de algum desses? </h1>
           </Widget.Header>
 
           <Widget.Content>
-            <form onSubmit={(event) => {
-              event.preventDefault();
-              route.push(`./quiz?nickame=${name}`)
-            }}>
-              <input placeholder="Como quer ser chamado?" onChange={(event) => {
-                setNickName(event.target.value)
-              }} />
-              <button type="submit" disabled={nickName.length == 0 }>
-                {nickName}, Vamos Jogar!
-              </button>
+            <form
+              onSubmit={(event) => {
+                event.preventDefault();
+                route.push(`./quiz?nickame=${nickName}`);
+              }}
+            >
+              <Input
+                name="nickName"
+                value={nickName}
+                placeholder="Como quer ser chamado?"
+                onChange={(event) => {
+                  setNickName(event.target.value);
+                }}
+              />
+
+              <Button type="submit" disabled={nickName.length == 0}>
+                {`${nickName} Vamos Jogar!`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>

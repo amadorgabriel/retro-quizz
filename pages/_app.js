@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import Head from "next/head";
+import db from "../db.json";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -25,16 +26,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const theme = {
-  colors: {
-    primary: "#9A3FB4",
-    secondary: "#3A61EB",
-    mainBg: "#1C1814",
-    contrastText: "#FFFFFF",
-    wrong: "#FF5722",
-    success: "#4CAF50"
-  },
-}
+const { theme } = db;
 
 export default function App({ Component, pageProps }) {
   return (
@@ -51,16 +43,16 @@ export default function App({ Component, pageProps }) {
         {/* OG METADATA */}
         <meta
           name="description"
-          content="App Quiz usando Next.js e StyledComponents"
+          content={db.description}
         />
         <meta property="og:locale" content="pt_BR" />
-        <meta property="og:title" content="QuizzMania Retrô-Games" />
+        <meta property="og:title" content={db.title} />
         <meta property="og:site_name" content="QuizzMania" />
         <meta
           property="og:description"
-          content="App Quiz usando Next.js e StyledComponents"
+          content={db.description}
         />
-        <meta property="og:image" content="https://www.compare.bet/wp-content/uploads/2020/08/videogame-bg-1.jpg" />
+        <meta property="og:image" content={db.bg} />
         <meta property="og:image:type" content="image/jpg" />
         <meta property="og:image:width" content="1501" />
         <meta property="og:image:height" content="676" />

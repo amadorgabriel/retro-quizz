@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Button from "../Button/index";
 import Widget from "../Widget/index";
@@ -7,10 +7,10 @@ export default function QuestionWidget({
   questionData,
   totalQuestions,
   questionIndex,
-  onSubmit
+  onSubmit,
 }) {
-
-  const questionId = `question_${questionIndex}`
+  const questionId = `question_${questionIndex}`;
+  const [selectedAlternative, setSelectedAlternative] = useState(undefined);
 
   return (
     <Widget>
@@ -34,17 +34,28 @@ export default function QuestionWidget({
         <h2>{questionData.title}</h2>
         <p> {questionData.description} </p>
 
-        <form onSubmit={(event) => {
-          event.preventDefault();
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
 
-          onSubmit();
-        }}>
+            onSubmit(console.log("click"));
+          }}
+        >
           {questionData.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`;
 
             return (
-              <Widget.Topic htmlFor={alternativeId} as="label">
-                <input id={alternativeId} type="radio" name={questionId} />
+              <Widget.Topic
+                htmlFor={alternativeId}
+                as="label"
+                key={alternativeId}
+              >
+                <input
+                  id={alternativeId}
+                  type="radio"
+                  name={questionId}
+                  onChange={() => setSelectedAlternative(alternativeIndex)}
+                />
 
                 {alternative}
               </Widget.Topic>

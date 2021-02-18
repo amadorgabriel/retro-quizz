@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { useRouter } from "next/router";
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 
-import Logo from "../src/components/QuizLogo/index";
-import Button from "../src/components/Button/index";
-import Input from "../src/components/Input/index";
-import Widget from "../src/components/Widget/index";
-import Footer from "../src/components/Footer/index";
-import GitHubCorner from "../src/components/GithubCorner/index";
-import QuizBackground from "../src/components/QuizBackground/index";
-import QuizContainer from "../src/components/QuizContainer";
+import Logo from '../components/QuizLogo/index';
+import Button from '../components/Button/index';
+import Input from '../components/Input/index';
+import Widget from '../components/Widget/index';
+import Footer from '../components/Footer/index';
+import GitHubCorner from '../components/GithubCorner/index';
+import QuizBackground from '../components/QuizBackground/index';
+import QuizContainer from '../components/QuizContainer';
 
 export default function IndexPage() {
   const route = useRouter();
-  const [nickName, setNickName] = useState("");
+  const [nickName, setNickName] = useState('');
 
   return (
     <QuizBackground backgroundImage="https://www.compare.bet/wp-content/uploads/2020/08/videogame-bg-1.jpg">
@@ -40,7 +40,7 @@ export default function IndexPage() {
                 }}
               />
 
-              <Button type="submit" disabled={nickName.length == 0}>
+              <Button type="submit" disabled={nickName.length === 0}>
                 {`${nickName} Vamos Jogar!`}
               </Button>
             </form>

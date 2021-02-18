@@ -1,6 +1,6 @@
-import React from "react";
-import propTypes from "prop-types";
-import styled from "styled-components";
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
+import styled from 'styled-components';
 
 const Input = styled.input`
   width: 100%;

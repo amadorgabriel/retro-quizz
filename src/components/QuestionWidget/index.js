@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
 
-import Button from "../Button/index";
-import Widget from "../Widget/index";
+import Button from '../Button/index';
+import Widget from '../Widget/index';
 
 export default function QuestionWidget({
   questionData,
@@ -16,29 +18,39 @@ export default function QuestionWidget({
     <Widget>
       <Widget.Header>
         <h3>
-          Pergunta {questionIndex + 1} de {totalQuestions}
+          Pergunta
+          {' '}
+          {questionIndex + 1}
+          {' '}
+          de
+          {' '}
+          {totalQuestions}
         </h3>
       </Widget.Header>
 
       <img
         alt="Descrição"
         style={{
-          width: "100%",
-          height: "150px",
-          objectFit: "cover",
+          width: '100%',
+          height: '150px',
+          objectFit: 'cover',
         }}
         src={questionData.image}
       />
 
       <Widget.Content>
         <h2>{questionData.title}</h2>
-        <p> {questionData.description} </p>
+        <p>
+          {' '}
+          {questionData.description}
+          {' '}
+        </p>
 
         <form
           onSubmit={(event) => {
             event.preventDefault();
 
-            onSubmit(console.log("click"));
+            onSubmit(console.log('click'));
           }}
         >
           {questionData.alternatives.map((alternative, alternativeIndex) => {

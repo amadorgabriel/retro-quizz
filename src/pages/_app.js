@@ -1,6 +1,10 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import Head from "next/head";
-import db from "../db.json";
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
+
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import Head from 'next/head';
+import db from '../../db.json';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -24,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
-`
+`;
 
 const { theme } = db;
 
@@ -59,11 +63,11 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
 
       </Head>
-      
+
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }

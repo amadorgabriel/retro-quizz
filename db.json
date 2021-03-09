@@ -4,25 +4,99 @@
   "description": "Será que você lembra de todos esses jogos da infância? Vamos conderir!",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://static.quizur.com/i/b/574e542fa60602.15002111images%20(1).jpg",
+      "title": "Esse Joystick pertence a qual vídeogame?",
       "description": "Essa é pra aquecer",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Game gear",
+        "Atari",
+        "Odyssey",
+        "Nintendo"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
+      "image": "https://static.quizur.com/i/b/574e55d1ddf5d4.63316157download%20(1).jpg",
+      "title": "Qual o nome desse game ?",
+      "description": "Faz tempo em haha",
+      "answer": 2,
+      "alternatives": [
+         "Super Grander Prix",
+         "Speed Ride",
+         "Out Run",
+         "Nitro Racing"
+      ]
+    },
+    {
+      "image": "https://static.quizur.com/i/b/574e58682ea8d5.23626690Sonic-2-2013-EHZ.jpg",
+      "title": "Como é chamado o arqui-inimigo de Sonic ?",
+      "description": "Faz tempo em haha",
+      "answer": 1,
+      "alternatives": [
+         "Doutor X",
+         "Doutor Eggman",
+         "Doutor Cosmos",
+         "Doutor Estranho"
+      ]
+    },
+    {
+      "image": "https://static.quizur.com/i/b/574e5a0b9517e3.40557562Moonwalker-001k.png",
+      "title": "Para qual cantor famoso esse game foi criado?",
+      "description": "Faz tempo em haha",
+      "answer": 2,
+      "alternatives": [
+         "Elvis Presley",
+         "Frank Sinatra",
+         "Michael Jackson",
+         "Bruno Mars"
+      ]
+    },
+    {
+      "image": "https://static.quizur.com/i/b/574e5b65390ab3.53165013da4rkiabsg3qhvk1jel2di0uv.jpg",
+      "title": "Alex Kidd é mascote de qual videogame ?",
+      "description": "Faz tempo em haha",
+      "answer": 2,
+      "alternatives": [
+         "Master System",
+         "Nintendo",
+         "Mega Drive",
+         "Super Nintendo"
+      ]
+    },
+    {
+      "image": "https://static.quizur.com/i/b/574f71d4b77ce0.17141589images%20(1).jpg",
+      "title": "",
       "description": "Faz tempo em haha",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Haggar, Cody, Guy",
+         "Buzz, Ty, Kato",
+         "Terry Bogard, Andy Bogard, Joe Higashi",
+         "Johnny Cage, Liu Kang, Kano"
+      ]
+    },
+    {
+      "image": "https://static.quizur.com/i/b/574f7c793a9ed7.11708720download.png",
+      "title": "Qual o nome desse game?",
+      "description": "Faz tempo em haha",
+      "answer": 1,
+      "alternatives": [
+         "River raid",
+         "Enduro",
+         "Beam rider",
+         "Pitfall"
+      ]
+    },
+    {
+      "image": "https://static.quizur.com/i/b/574f7e3ed1d4d6.0489348900118.jpg",
+      "title": "O que costumava se fazer com o cartucho quando o jogo não pegava ?",
+      "description": "Faz tempo em haha",
+      "answer": 3,
+      "alternatives": [
+         "Sacudia",
+         "Limpava",
+         "Descartava",
+         "Assoprava"
       ]
     }
   ],

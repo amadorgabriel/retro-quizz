@@ -43,7 +43,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 ## 🚀 Como executar
 
-- Clone o repositório `git clone: https://github.com/amador2014/Quizz-Mania.git`
+- Clone o repositório `git clone https://github.com/amadorgabriel/retro-quizz.git`
 - Instale as dependências `npm install`
 - Inicie o projeto `npm start`
 
